@@ -53699,9 +53699,14 @@ policyContext_newContext_sp_basic128rsa15(UA_SecurityPolicy *securityPolicy,
     }
 
     /* Add the system entropy source */
+    // mbedErr = mbedtls_entropy_add_source(&pc->entropyContext,
+    //                                      mbedtls_platform_entropy_poll, NULL, 0,
+    //                                      MBEDTLS_ENTROPY_SOURCE_STRONG);
+
     mbedErr = mbedtls_entropy_add_source(&pc->entropyContext,
-                                         mbedtls_platform_entropy_poll, NULL, 0,
+                                         mbedtls_hardclock_poll, NULL, 0,
                                          MBEDTLS_ENTROPY_SOURCE_STRONG);
+
     if(mbedErr) {
         retval = UA_STATUSCODE_BADSECURITYCHECKSFAILED;
         goto error;
@@ -54518,8 +54523,11 @@ policyContext_newContext_sp_basic256(UA_SecurityPolicy *securityPolicy,
     }
 
     /* Add the system entropy source */
+    // mbedErr = mbedtls_entropy_add_source(&pc->entropyContext,
+    //                                      mbedtls_platform_entropy_poll, NULL, 0,
+    //                                      MBEDTLS_ENTROPY_SOURCE_STRONG);
     mbedErr = mbedtls_entropy_add_source(&pc->entropyContext,
-                                         mbedtls_platform_entropy_poll, NULL, 0,
+                                         mbedtls_hardclock_poll, NULL, 0,
                                          MBEDTLS_ENTROPY_SOURCE_STRONG);
     if(mbedErr) {
         retval = UA_STATUSCODE_BADSECURITYCHECKSFAILED;
@@ -55379,9 +55387,14 @@ policyContext_newContext_sp_basic256sha256(UA_SecurityPolicy *securityPolicy,
     }
 
     /* Add the system entropy source */
+    // mbedErr = mbedtls_entropy_add_source(&pc->entropyContext,
+    //                                      mbedtls_platform_entropy_poll, NULL, 0,
+    //                                      MBEDTLS_ENTROPY_SOURCE_STRONG);
+
     mbedErr = mbedtls_entropy_add_source(&pc->entropyContext,
-                                         mbedtls_platform_entropy_poll, NULL, 0,
+                                         mbedtls_hardclock_poll, NULL, 0,
                                          MBEDTLS_ENTROPY_SOURCE_STRONG);
+
     if(mbedErr) {
         retval = UA_STATUSCODE_BADSECURITYCHECKSFAILED;
         goto error;
