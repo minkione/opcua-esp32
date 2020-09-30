@@ -9,7 +9,7 @@
                 "D:\\Task_Force\\ESP32\\esp-idf\\components\\**"
             ],
             "defines": [],
-            "compilerPath": "/home/cmb/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
+            "compilerPath": "D:\\Task_Force\\ESP32\\.espressif\\tools\\xtensa-esp32-elf\\esp-2020r1-8.2.0\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc-8.2.0.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64"

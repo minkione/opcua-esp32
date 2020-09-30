@@ -38,3 +38,7 @@ Also, if you want to build open62541.c/.h/.lib from source, note the changes on 
 ## License
 
 This project is licensed under the Mozilla Public License Version 2.0 which is inherited from Open62541 project - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Caution
+
+It is the users responsibility to use in production, it is not suggested to use for critical applications. Only suggested for PoC's and diy projects.
