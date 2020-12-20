@@ -1,6 +1,9 @@
 # OPC UA Server on ESP32
 [![Build Status](https://travis-ci.org/cmbahadir/opcua-esp32.svg?branch=master)](https://travis-ci.org/cmbahadir/opcua-esp32)
 
+If you do not want to struggle with coding and looking for an ready to use one with a configuration tool, then please checkout this repo:
+https://github.com/cmbahadir/opcua-server
+
 It is aimed to run OPC UA server on ESP32 board (xtensa toolchain). The information model is handled under models.c/h file. It contains a temperature sensor(DHT22) read port 4, a callback method to call ESP32-WROOM on board LED and 2 relays, which can be controlled as OPCUA objects.
 
     On Board LED : GPIO 2
